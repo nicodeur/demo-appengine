@@ -1,0 +1,24 @@
+config:
+  target: 'https://demo-preprod-dot-mobile-retail-r8gs.appspot.com'
+  phases:
+    - duration: 600 # 3600
+      arrivalRate: 2 #2
+      rampTo: 50
+  statsInterval: 1
+  plugins:
+    metrics-by-endpoint: {}
+    cloudwatch:
+      namespace: 'artillery-demo-preprod'
+scenarios:
+  - name : 'base_url'
+    flow:  
+    - get:
+        url: "/preprod/gae/info"
+#  - name : 'preprod-docker-8'
+#    flow:  
+#    - get:
+#        url: "https://preprod-docker-1-dot-demo-preprod-dot-mobile-retail-r8gs.appspot.com/preprod/gae/info"
+#  - name : 'preprod-docker-8'
+#    flow:  
+#    - get:
+#        url: "/preprod/wait/gae/info"

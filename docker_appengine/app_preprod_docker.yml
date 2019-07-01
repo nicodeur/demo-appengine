@@ -1,0 +1,12 @@
+service : demo-preprod
+runtime: custom
+env: flex
+
+network:
+  name: vpc-mobile-retail
+  forwarded_ports:
+    - 80:8080
+env_variables:
+  redisHost: "10.0.0.3"
+  redisPort: "6379"
+  staging: "preprod"

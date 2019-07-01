@@ -1,0 +1,33 @@
+service : demo-preprod
+runtime: nodejs
+env: flex
+
+automatic_scaling:
+  min_num_instances: 1
+  max_num_instances: 2
+  cool_down_period_sec: 120
+  cpu_utilization:
+    target_utilization: 0.2
+resources: 
+  cpu: 1
+  memory_gb: 0.6
+  disk_size_gb: 10
+network:
+  name: vpc-mobile-retail
+env_variables:
+  redisHost: "10.0.0.3"
+  redisPort: "6379"
+  staging: "preprod"
+liveness_check:
+  path: "/health"
+  check_interval_sec: 30
+  timeout_sec: 4
+  failure_threshold: 2
+  success_threshold: 2
+readiness_check:
+  path: "/ready"
+  check_interval_sec: 5
+  timeout_sec: 4
+  failure_threshold: 2
+  success_threshold: 2
+  app_start_timeout_sec: 300

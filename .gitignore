@@ -1,0 +1,6 @@
+.vscode
+express_appengine/node_modules
+express_appengine/package-lock.json
+front-react/node_modules
+front-react/build
+front-react/package-lock.json

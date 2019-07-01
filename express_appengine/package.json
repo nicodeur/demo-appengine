@@ -1,0 +1,16 @@
+{
+  "name": "demo_appengine",
+  "version": "1.0.0",
+  "description": "basic demo appengine flex node express",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google-cloud/trace-agent": "^4.0.0",
+    "express": "^4.17.1",
+    "redis": "^2.8.0"
+  }
+}

@@ -1,0 +1,34 @@
+{
+    "filter": "resource.type=\"gae_app\" resource.labels.module_id=\"demo-preprod\" logName=\"projects/mobile-retail-r8gs/logs/appengine.googleapis.com%2Fnginx.request\" httpRequest.userAgent!=\"GoogleStackdriverMonitoring-UptimeChecks(https://cloud.google.com/monitoring)\" httpRequest.requestUrl!=\"/favicon.ico\"",
+    "metricDescriptor": {
+      "name": "projects/mobile-retail-r8gs/metricDescriptors/logging.googleapis.com/user/demo-api-response-time",
+      "labels": [
+        {
+          "key": "apiname"
+        },
+        {
+          "key": "httpcode"
+        },
+        {
+          "key": "method"
+        }
+      ],
+      "metricKind": "DELTA",
+      "valueType": "DISTRIBUTION",
+      "unit": "s",
+      "type": "logging.googleapis.com/user/demo-api-response-time"
+    },
+    "valueExtractor": "EXTRACT(jsonPayload.latencySeconds)",
+    "labelExtractors": {
+      "method": "EXTRACT(httpRequest.requestMethod)",
+      "httpcode": "EXTRACT(httpRequest.status)",
+      "apiname": "EXTRACT(httpRequest.requestUrl)"
+    },
+    "bucketOptions": {
+      "exponentialBuckets": {
+        "numFiniteBuckets": 64,
+        "growthFactor": 2,
+        "scale": 0.01
+      }
+    }
+  }
