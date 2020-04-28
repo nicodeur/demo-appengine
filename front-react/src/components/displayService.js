@@ -17,7 +17,7 @@ class DisplayService extends React.Component {
 
     fetchApi () {
         this.setState({displayLoader:true})
-        fetch("https://demo-preprod-dot-mobile-retail-r8gs.appspot.com/preprod/gae/info")
+        fetch("https://demo-preprod-dot-gleaming-tube-275212.ew.r.appspot.com/preprod/gae/info")
         .then(response => {
             if (!response.ok) {
                 throw Error("Network request failed")

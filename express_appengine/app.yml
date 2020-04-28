@@ -12,12 +12,6 @@ resources:
   cpu: 1
   memory_gb: 0.6
   disk_size_gb: 10
-network:
-  name: vpc-mobile-retail
-env_variables:
-  redisHost: "10.0.0.3"
-  redisPort: "6379"
-  staging: "preprod"
 liveness_check:
   path: "/health"
   check_interval_sec: 30
@@ -31,3 +25,5 @@ readiness_check:
   failure_threshold: 2
   success_threshold: 2
   app_start_timeout_sec: 300
+env_variables:
+  staging: "preprod"

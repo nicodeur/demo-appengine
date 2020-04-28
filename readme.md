@@ -1,12 +1,13 @@
 # Lien vers la présentation
-https://docs.google.com/presentation/d/1D6U9d42w3YaxUpqXVsO43qT3gmMvcwB1-fGMrtALLqg/edit?usp=sharing
+https://docs.google.com/presentation/d/1fTchN8dG3oAtI18jX1a2Sdj0Eg2d3cE0Xdo9qmKydII/edit?usp=sharing
 
-# Lien vers l'api 
-https://demo-preprod-dot-mobile-retail-r8gs.appspot.com/preprod/gae/info
+# Alias docker poour executer gcloud 
 
-# Lien vers le front
-https://react-demo-dot-mobile-retail-r8gs.appspot.com/
+```
+alias gcloudd='docker run --rm -ti -v /var/run/docker.sock:/var/run/docker.sock --volumes-from gcloud-config -v $(pwd):/working -w /working --name gcloud-runtime google/cloud-sdk gcloud'
 
+gcloudd init  # connect on your gcloud account
+```
 
 # Contenu d projet
 - artiellery : Projet node qui permet de faire une monter en charge le service 

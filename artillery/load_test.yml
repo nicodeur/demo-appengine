@@ -1,14 +1,10 @@
 config:
-  target: 'https://demo-preprod-dot-mobile-retail-r8gs.appspot.com'
+  target: 'https://demo-preprod-dot-gleaming-tube-275212.ew.r.appspot.com'
   phases:
     - duration: 600 # 3600
       arrivalRate: 2 #2
       rampTo: 50
   statsInterval: 1
-  plugins:
-    metrics-by-endpoint: {}
-    cloudwatch:
-      namespace: 'artillery-demo-preprod'
 scenarios:
   - name : 'base_url'
     flow:  
@@ -17,7 +13,7 @@ scenarios:
 #  - name : 'preprod-docker-8'
 #    flow:  
 #    - get:
-#        url: "https://preprod-docker-1-dot-demo-preprod-dot-mobile-retail-r8gs.appspot.com/preprod/gae/info"
+#        url: "https://preprod-docker-1-dot-demo-preprod-dot-gleaming-tube-275212.appspot.com/preprod/gae/info"
 #  - name : 'preprod-docker-8'
 #    flow:  
 #    - get:

@@ -1,4 +1,3 @@
-const cache = require('./utils/cacheService')
 const env = process.env.staging
 
 const wait = ms => new Promise(resolve => setTimeout(resolve, ms));
@@ -20,16 +19,6 @@ const envsGAE = {
 }
 
 const initEndPoint = (app) => {
-
-    app.get('/' + env + '/cache/key/:cacheKey', async (req, res) => {
-
-        const cacheKey = req.params.cacheKey
-        let data = await cache.getDataCache(cacheKey)
-        res.status(200).send({
-            data: data
-        })
-    });
-
 
     app.get('/' + env + '/wait/gae/info', async (req, res) => {
 

@@ -1,7 +1,7 @@
 {
-    "filter": "resource.type=\"gae_app\" resource.labels.module_id=\"demo-preprod\" logName=\"projects/mobile-retail-r8gs/logs/appengine.googleapis.com%2Fnginx.request\" httpRequest.userAgent!=\"GoogleStackdriverMonitoring-UptimeChecks(https://cloud.google.com/monitoring)\" httpRequest.requestUrl!=\"/favicon.ico\"",
+    "filter": "resource.type=\"gae_app\" resource.labels.module_id=\"demo-preprod\" logName=\"projects/gleaming-tube-275212/logs/appengine.googleapis.com%2Fnginx.request\" httpRequest.userAgent!=\"GoogleStackdriverMonitoring-UptimeChecks(https://cloud.google.com/monitoring)\" httpRequest.requestUrl!=\"/favicon.ico\"",
     "metricDescriptor": {
-      "name": "projects/mobile-retail-r8gs/metricDescriptors/logging.googleapis.com/user/demo-api-response-time",
+      "name": "projects/gleaming-tube-275212/metricDescriptors/logging.googleapis.com/user/demo-api-response-time",
       "labels": [
         {
           "key": "apiname"

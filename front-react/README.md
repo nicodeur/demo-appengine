@@ -1,12 +1,12 @@
 
 # Run local
 ```
-npm run-script start
+npm install && npm run-script start
 ```
 
 # Build Application
 ```
-npm run build
+npm install && npm run build
 ```
 Le build génère les sources à déployer dans le répertoire <b>build</b>
 

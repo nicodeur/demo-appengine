@@ -1,6 +1,6 @@
 # Deploiement de la version NodeJS
 ```
-gcloud app deploy app_preprod.yml  --no-promote -v "VERSION NAME"
+gcloud app deploy app.yml  --no-promote -v "VERSION NAME"
 ```
 # liste des versions du service
 ```
@@ -24,8 +24,8 @@ SPLIT_BY must be one of: cookie, ip, random.
 > gcloud app services set-traffic demo-preprod  --splits v2=.2,v3=.8 --split-by=random
 
 Setting the following traffic allocation:
- - mobile-retail-r8gs/demo-preprod/v2: 0.2
- - mobile-retail-r8gs/demo-preprod/v3: 0.8
+ - gleaming-tube-275212/demo-preprod/v2: 0.2
+ - gleaming-tube-275212/demo-preprod/v3: 0.8
 NOTE: Splitting traffic by random.
 Any other versions of the specified service will receive zero traffic.
 Do you want to continue (Y/n)?  Y
